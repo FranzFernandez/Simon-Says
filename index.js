@@ -55,6 +55,24 @@ const desactivarElem = (elementoDom) => {
 	elementoDom.classList.remove("active")
 };
 
+const ocultarElem = (elementoDom) => {
+	elementoDom.classList.add("hide");
+	elementoDom.classList.remove("show");
+}
+
+const activarTodos = (elementos) => {
+	elementos.forEach(activarElem);
+}
+
+const desactivarTodos = (elementos) => {
+	elementos.forEach(desactivarElem);
+}
+
+const mostrarElem = (elementoDom) => {
+	elementoDom.classList.add("show");
+	elementoDom.classList.remove("hide");
+}
+
 /**
  * Funciones de referencia
  */
