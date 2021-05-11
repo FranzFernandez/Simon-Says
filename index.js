@@ -4,7 +4,7 @@
 
 //guardamos el nombre del jugador en localStorage
 const nombreJugadorStorage = window.localStorage.getItem("nombre");
-const elementoNombre = obtenerElementoDom("nombre_jugador");
+const elementoNombre = obtenerElementoDom("nombreJugador");
 elementoNombre.value = nombreJugadorStorage || "";
 
 const opciones = {
@@ -41,6 +41,19 @@ const estadoJuego = {
 */
 
 const botonesDelJuego = document.querySelectorAll(".simon-button");
+
+//obtenemos los elementos del DOM por id para despues interactuar por id
+const obtenerElementoDom = (id) => {
+	return window.document.getElementById(id);
+};
+
+const activarElem = (elementoDom) => {
+	elementoDom.classList.add("active");
+};
+
+const desactivarElem = (elementoDom) => {
+	elementoDom.classList.remove("active")
+};
 
 /**
  * Funciones de referencia
